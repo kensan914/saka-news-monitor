@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "saka-news-monitor"
+version = "0.1.0"
+description = ""
+authors = ["kento.toriumi <kento.toriumi@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+certifi = "^2023.7.22"
+urllib3 = "^2.0.4"
+bs4 = "^0.0.1"
+lxml = "^4.9.3"
+black = "^23.7.0"
+pytz = "^2023.3.post1"
+line-bot-sdk = "^3.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
