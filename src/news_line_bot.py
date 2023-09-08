@@ -19,6 +19,11 @@ class NewsLineBot:
         line_channel_access_token = os.environ.get("HINATA_LINE_CHANNEL_ACCESS_TOKEN")
         return cls()._call(line_channel_access_token, news_items)
 
+    @classmethod
+    def call_sakura(cls, news_items: list[NewsItem]):
+        line_channel_access_token = os.environ.get("SAKURA_LINE_CHANNEL_ACCESS_TOKEN")
+        return cls()._call(line_channel_access_token, news_items)
+
     def _call(self, line_channel_access_token: str, news_items: list[NewsItem]):
         line_bot_api = LineBotApi(line_channel_access_token)
         for news_item in news_items:
