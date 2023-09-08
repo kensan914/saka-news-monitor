@@ -29,6 +29,22 @@ class NewsCrawler:
             title_selector,
         )
 
+    @classmethod
+    def call_sakura(cls):
+        base_url = "https://sakurazaka46.com"
+        news_url = f"https://sakurazaka46.com/s/s46/news/list?ima=0000&dy={cls.format_yesterday()}"
+        news_item_tags_selector = "ul.com-news-part a"
+        category_selector = "p.type"
+        title_selector = "p.lead"
+
+        return cls()._call(
+            base_url,
+            news_url,
+            news_item_tags_selector,
+            category_selector,
+            title_selector,
+        )
+
     def __init__(self):
         ...
 
